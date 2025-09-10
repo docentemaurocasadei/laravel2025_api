@@ -12,12 +12,13 @@
     <div class="container text-center">
       <div class="card shadow-lg border-0 rounded-4 p-5 bg-white">
         <h1 class="display-4 fw-bold text-primary mb-3">
-          📑 Documentazione
+          📑 {{ $titolo }}
         </h1>
         <p class="lead text-muted">
-          Benvenuto nella sezione dedicata alla documentazione.<br>
-          Qui troverai tutte le informazioni utili e le guide di riferimento.
+          {{ $testo }}
         </p>
+        {{ Route::current()->uri() }}
+        {{ url()->current() }}
         <a href="#" class="btn btn-primary btn-lg mt-4">
           Vai alla Documentazione
         </a>
