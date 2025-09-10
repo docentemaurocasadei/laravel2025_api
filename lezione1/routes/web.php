@@ -7,5 +7,6 @@ Route::get('/', function () {
 });
 
 Route::get('/documentazione', function () {
-    return response()->json('Documentazione in costruzione' );
+    // return response()->json('Documentazione in costruzione' );
+    return view('documentazione');
 });
