@@ -19,6 +19,7 @@
         </p>
         {{ Route::current()->uri() }}
         {{ url()->current() }}
+        {{ config('app.name') }}
         <a href="#" class="btn btn-primary btn-lg mt-4">
           Vai alla Documentazione
         </a>

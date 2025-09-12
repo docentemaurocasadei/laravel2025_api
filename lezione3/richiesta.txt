@@ -1,0 +1,25 @@
+installare un applicativo laravel nella sottocartella lezione3/laravel
+modificare il file .env in modo che i parametri di nome applicazione, 
+log (daily) e connessione al database siano corretti
+
+
+avviare il server 
+
+verificare il funzionamento tramite la route /up
+
+composer create-project laravel/laravel laravel
+dentro .env
+APP_NAME=Lezione3
+...
+APP_LOCALE=it
+APP_FALLBACK_LOCALE=it
+APP_FAKER_LOCALE=it_IT
+...
+LOG_CHANNEL=daily
+...
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=corso_lezione3
+DB_USERNAME=root
+DB_PASSWORD=*****
