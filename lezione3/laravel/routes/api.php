@@ -16,3 +16,29 @@ Route::get('/roads', function () {
     return response()
     ->json(['data' => $data], 200);
 });
+// Route::get('/roads/{id}', function ($id) {
+//     $data = [
+//         'id' => 1, 
+//         'name' => 'Via Roma', 
+//         'description' => 'Una strada nel centro di Roma'
+//     ];
+//     //$road = collect($data)->firstWhere('id', $id);
+//     if ($data) {
+//         return response()->json(['data' => $data], 200);
+//     } else {
+//         return response()->json(['error' => 'Strada non trovata'], 404);
+//     }
+// });
+Route::get('/roads/{id}', function ($id) {
+    $data = [
+        ['id' => 1, 'name' => 'Via Roma', 'description' => 'Una strada nel centro di Roma'],
+        ['id' => 2, 'name' => 'Corso Italia', 'description' => 'Una strada nel centro di Milano'],
+        ['id' => 3, 'name' => 'Piazza Duomo', 'description' => 'Una piazza nel centro di Firenze'],
+    ];
+    $road = collect($data)->firstWhere('id', $id);
+    if ($road) {
+        return response()->json(['data' => $road], 200);
+    } else {
+        return response()->json(['error' => 'Strada non trovata'], 404);
+    }
+});
